@@ -54,27 +54,25 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 2rem;
 }
 
-/* Center section with logo and nearby links */
-.nav-center {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-/* Left side navigation - closer to logo */
+/* Left side navigation - closer to center */
 .nav-left {
   display: flex;
   gap: 1.5rem;
+  justify-self: end;
   align-items: center;
 }
 
-/* Logo */
+/* Center logo - stays centered */
+.nav-logo {
+  justify-self: center;
+}
+
 .nav-logo .logo {
   height: 40px;
   width: auto;
@@ -85,6 +83,7 @@ body {
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-self: start;
 }
 
 /* Social navigation links */
@@ -825,16 +824,17 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  .nav-center {
+    grid-template-columns: auto 1fr auto;
     gap: 1rem;
   }
   
   .nav-left {
     gap: 1rem;
+    justify-self: start;
+  }
+  
+  .nav-right {
+    justify-self: end;
   }
   
   .nav-social {
@@ -893,17 +893,7 @@ body {
   
   .nav-container {
     padding: 1rem;
-    flex-wrap: wrap;
-  }
-  
-  .nav-center {
-    order: 1;
-    flex: 1;
-    justify-content: center;
-  }
-  
-  .nav-right {
-    order: 2;
+    grid-template-columns: 1fr auto 1fr;
   }
   
   .nav-left {
