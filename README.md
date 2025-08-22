@@ -15,7 +15,8 @@ dj-dino-bravo-website/
     ├── js/
     │   └── script.js         # JavaScript functionality
     └── images/
-        ├── banner.png        # Hero section background
+        ├── banner.png        # Original banner image
+        ├── hero-banner.jpg   # Main hero section background
         ├── logo.svg          # Site logo
         ├── gallery_1.jpg     # Gallery/track images
         ├── gallery_2.jpg
