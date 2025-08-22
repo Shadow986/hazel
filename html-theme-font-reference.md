@@ -1,285 +1,143 @@
-# HTML Theme and Font Reference
-
-## CSS Variables for Theme Management
-
-```css
-:root {
-  /* Light Theme Colors */
-  --primary-color: #3b82f6;
-  --secondary-color: #64748b;
-  --background-color: #ffffff;
-  --surface-color: #f8fafc;
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
-  --border-color: #e2e8f0;
-  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-  
-  /* Dark Theme Colors */
-  --dark-primary: #60a5fa;
-  --dark-secondary: #94a3b8;
-  --dark-background: #0f172a;
-  --dark-surface: #1e293b;
-  --dark-text-primary: #f1f5f9;
-  --dark-text-secondary: #cbd5e1;
-  --dark-border: #334155;
-  --dark-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
-}
-```
-
-## Font Stack Examples
-
-```css
-/* System Font Stack */
-.system-font {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 
-               'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 
-               sans-serif;
-}
-
-/* Google Fonts Examples */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-
-.inter-font { font-family: 'Inter', sans-serif; }
-.poppins-font { font-family: 'Poppins', sans-serif; }
-.roboto-font { font-family: 'Roboto', sans-serif; }
-
-/* Monospace for Code */
-.code-font {
-  font-family: 'Fira Code', 'JetBrains Mono', 'SF Mono', Monaco, 'Cascadia Code', 
-               'Roboto Mono', Consolas, 'Courier New', monospace;
-}
-```
-
-## Complete HTML Template with Theme Support
-
-```html
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theme Reference</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-          /* Light Theme */
-          --primary: #3b82f6;
-          --secondary: #64748b;
-          --background: #ffffff;
-          --surface: #f8fafc;
-          --text-primary: #1e293b;
-          --text-secondary: #64748b;
-          --border: #e2e8f0;
-          --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
-        }
-
-        [data-theme="dark"] {
-          --primary: #60a5fa;
-          --secondary: #94a3b8;
-          --background: #0f172a;
-          --surface: #1e293b;
-          --text-primary: #f1f5f9;
-          --text-secondary: #cbd5e1;
-          --border: #334155;
-          --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3);
-        }
-
-        * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-        }
-
-        body {
-          font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-          background-color: var(--background);
-          color: var(--text-primary);
-          line-height: 1.6;
-          transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .container {
-          max-width: 1200px;
-          margin: 0 auto;
-          padding: 2rem;
-        }
-
-        .card {
-          background: var(--surface);
-          border: 1px solid var(--border);
-          border-radius: 8px;
-          padding: 1.5rem;
-          margin-bottom: 1rem;
-          box-shadow: var(--shadow);
-        }
-
-        .btn {
-          background: var(--primary);
-          color: white;
-          border: none;
-          padding: 0.75rem 1.5rem;
-          border-radius: 6px;
-          cursor: pointer;
-          font-weight: 500;
-          transition: all 0.2s ease;
-        }
-
-        .btn:hover {
-          opacity: 0.9;
-          transform: translateY(-1px);
-        }
-
-        .theme-toggle {
-          position: fixed;
-          top: 1rem;
-          right: 1rem;
-          background: var(--surface);
-          border: 1px solid var(--border);
-          color: var(--text-primary);
-        }
-
-        h1, h2, h3 { 
-          color: var(--text-primary);
-          margin-bottom: 1rem;
-        }
-
-        p { 
-          color: var(--text-secondary);
-          margin-bottom: 1rem;
-        }
-
-        code {
-          background: var(--surface);
-          padding: 0.25rem 0.5rem;
-          border-radius: 4px;
-          font-family: 'Fira Code', monospace;
-          border: 1px solid var(--border);
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/index.js" defer></script>
+    <title>DJ Dino Bravo</title>
 </head>
 <body>
-    <button class="btn theme-toggle" onclick="toggleTheme()">🌙</button>
-    
-    <div class="container">
-        <div class="card">
-            <h1>Theme Reference Page</h1>
-            <p>This page demonstrates the theme system with CSS variables.</p>
-            <button class="btn">Primary Button</button>
-        </div>
-
-        <div class="card">
-            <h2>Typography Examples</h2>
-            <h3>Heading 3</h3>
-            <p>This is a paragraph with <code>inline code</code> styling.</p>
+    <div id="hero">
+        <img src="./assets/images/logo.svg" alt="Logo">
+        <p>Yo Momma's Fav DJ</p>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <a href="#music">Music</a>
+                </li>
+                <li>
+                    <a href="#school">School</a>
+                </li>
+                <li>
+                    <a href="#contact">Bookings</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="social__links">
+            <a href="https://www.facebook.com/djdinobravo/">
+                <img src="./assets/images/hero_fb.svg" alt="Facebook">
+            </a>
+            <a href="https://www.youtube.com/@djdinobravo">
+                <img src="./assets/images/hero_tube.svg" alt="YouTube">
+            </a>
+            <a href="https://open.spotify.com/artist/6ph0EJhjqYJzgjKZk6dgCG">
+                <img src="./assets/images/hero_spot.svg" alt="Spotify">
+            </a>
+            <a href="https://soundcloud.com/djdinobravo">
+                <img src="./assets/images/hero_sc.svg" alt="SoundCLoud">
+            </a>
+            <a href="https://www.instagram.com/djdinobravo/?hl=en">
+                <img src="./assets/images/hero_insta.svg" alt="Instagram">
+            </a>
+            <a href="">
+                <img src="./assets/images/hero_whats.svg" alt="WhatsApp">
+            </a>
         </div>
     </div>
+    <div id="about">
+        <div class="title">
+            <h1>
+                About Me 
+            </h1>
+        </div>
+        <img src="./assets/images/banner.png" alt="Banner image">
+        <p>
+            Music has forever been ingrained in my soul and my entry into the music world goes back to the days of my youth where I enjoyed break-dancing 
+            and rapping.
+        </p>
+        <p>
+            I remain ever faithful to my indigenous sounds but have continued to reinvent myself over the years. The result of this is the great-sounding 
+            rhythms that have, and continue to, set many a dance floor alight! My ongoing evolution proves that I am able to constantly adapt to the latest 
+            music trends, sounds and techniques.
+        </p>
+    </div>
+    <div id="music">
+        <div class="title">
+            <h1>
+                Music
+            </h1>
+            <p>
+                fresh from the studio
+            </p>
+        </div>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/album/0qwaNAzbJ2cjQ8JEcxGacg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-    <script>
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            html.setAttribute('data-theme', newTheme);
-            
-            const toggle = document.querySelector('.theme-toggle');
-            toggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
-        }
-    </script>
+    </div>
+    <div id="school">
+        <h1>
+            School
+        </h1>
+        <div class="desc">
+            <img src="./assets/images/school.jpg" alt="School Logo">
+            <p>
+                Almost 10 years ago I embarked on a journey to start sharing my talents with the next generation of open minded DJs that want to take their 
+                journey to the next level. I started the DJ school to help others and guide them to achieve their full potential in this DJ game.
+            </p>
+        </div>
+        <div class="carousel">
+            <div class="slides">
+              <img src="./assets/images/gallery_1.jpg" alt="Slide 1">
+              <img src="./assets/images/gallery_2.jpg" alt="Slide 2">
+              <img src="./assets/images/gallery_3.jpg" alt="Slide 3">
+              <img src="./assets/images/gallery_4.jpg" alt="Slide 4">
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div class="dots"></div>
+          </div>
+    </div>
+    <div id="contact">
+        <h1>Bookings / Contact</h1>
+        <p>Feel free to book me for a gig or inquire about my school.</p>
+        <form action="" class="stylish-form">
+            <div class="input-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+          
+            <div class="input-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          
+            <div class="input-group">
+              <label for="type">Type:</label>
+              <select id="type" name="type" required>
+                <option value="">Select one...</option>
+                <option value="gig">Gig</option>
+                <option value="school">School</option>
+              </select>
+            </div>
+          
+            <div class="input-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+          
+            <button type="submit">Submit</button>
+          </form>          
+    </div>
+    <footer>
+        <div class="container">
+            <div class="logo__portion">
+                <img src="./assets/images/logo.svg" alt="logo">
+            </div>
+            <p>© DJ Dino Bravo — All rights mixed & mastered.</p>
+        </div>
+    </footer>
 </body>
 </html>
-```
-
-## Popular Color Palettes
-
-```css
-/* Tailwind CSS Inspired */
-.tailwind-palette {
-  --blue-500: #3b82f6;
-  --gray-500: #6b7280;
-  --green-500: #10b981;
-  --red-500: #ef4444;
-  --yellow-500: #f59e0b;
-  --purple-500: #8b5cf6;
-}
-
-/* Material Design */
-.material-palette {
-  --primary: #1976d2;
-  --secondary: #dc004e;
-  --surface: #ffffff;
-  --background: #fafafa;
-  --error: #b00020;
-}
-
-/* GitHub Dark */
-.github-dark {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --border: #30363d;
-  --text-primary: #f0f6fc;
-  --text-secondary: #8b949e;
-  --accent: #58a6ff;
-}
-```
-
-## Responsive Typography Scale
-
-```css
-.typography-scale {
-  /* Mobile First */
-  --text-xs: 0.75rem;    /* 12px */
-  --text-sm: 0.875rem;   /* 14px */
-  --text-base: 1rem;     /* 16px */
-  --text-lg: 1.125rem;   /* 18px */
-  --text-xl: 1.25rem;    /* 20px */
-  --text-2xl: 1.5rem;    /* 24px */
-  --text-3xl: 1.875rem;  /* 30px */
-  --text-4xl: 2.25rem;   /* 36px */
-}
-
-@media (min-width: 768px) {
-  .typography-scale {
-    --text-3xl: 2.25rem;  /* 36px */
-    --text-4xl: 3rem;     /* 48px */
-  }
-}
-```
-
-## Animation Utilities
-
-```css
-.fade-in {
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.slide-up {
-  animation: slideUp 0.4s ease-out;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { 
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to { 
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-```
-
-## Usage Notes
-
-- Use CSS custom properties (variables) for consistent theming
-- Implement `data-theme` attribute switching for dark/light modes
-- Choose font stacks that provide good fallbacks
-- Test color contrast ratios for accessibility
-- Use relative units (rem, em) for scalable typography
-- Implement smooth transitions for theme changes

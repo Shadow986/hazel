@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - DINO BRAVO | Yo Mama's Favourite DJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Left side navigation - closer to center -->
+            <div class="nav-left">
+                <a href="academy.html" class="nav-link">ACADEMY</a>
+                <a href="contact.html" class="nav-link">CONTACT</a>
+            </div>
+            
+            <!-- Center logo - stays centered -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" alt="DINO BRAVO" class="logo">
+                </a>
+            </div>
+            
+            <!-- Right side social links -->
+            <div class="nav-right">
+                <div class="nav-social">
+                    <a href="#" class="social-nav-link" aria-label="Spotify">
+                        <img src="./assets/images/social-spotify-svgrepo-com.svg" alt="Spotify">
+                        <span>Spotify</span>
+                    </a>
+                    <a href="#" class="social-nav-link" aria-label="WhatsApp">
+                        <img src="./assets/images/social-whats-app-svgrepo-com.svg" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="social-nav-link" aria-label="Facebook">
+                        <img src="./assets/images/social-facebook-svgrepo-com.svg" alt="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                
+                <!-- Hamburger menu for remaining items -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <!-- Hidden menu for hamburger -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="music.html" class="nav-link">MUSIC</a></li>
+                <li><a href="gallery.html" class="nav-link active">GALLERY</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">GALLERY</h1>
+            <p class="page-subtitle">Moments from the BRAVOMANIA Journey</p>
+        </div>
+    </section>
+
+    <!-- Festival Gallery Section -->
+    <section class="festival-gallery-section">
+        <div class="container">
+            <h2 class="section-title">FESTIVALS & EVENTS</h2>
+            <p class="gallery-intro">From UTOPIA to OPIKOPPI, witness DINO BRAVO's electrifying performances at South Africa's biggest festivals</p>
+            
+            <div class="gallery-categories">
+                <button class="category-btn active" data-category="all">ALL</button>
+                <button class="category-btn" data-category="festivals">FESTIVALS</button>
+                <button class="category-btn" data-category="corporate">CORPORATE</button>
+                <button class="category-btn" data-category="clubs">CLUBS</button>
+                <button class="category-btn" data-category="sama">SAMA</button>
+            </div>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="festivals">
+                    <img src="./assets/images/hero-banner.jpg" alt="UTOPIA Festival Performance">
+                    <div class="gallery-overlay">
+                        <h3>UTOPIA FESTIVAL</h3>
+                        <p>Main stage performance</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="festivals">
+                    <img src="./assets/images/gallery_1.jpg" alt="OPIKOPPI Festival">
+                    <div class="gallery-overlay">
+                        <h3>OPIKOPPI</h3>
+                        <p>Legendary festival set</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="corporate">
+                    <img src="./assets/images/gallery_2.jpg" alt="Corporate Event">
+                    <div class="gallery-overlay">
+                        <h3>CORPORATE GALA</h3>
+                        <p>Premium corporate event</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="sama">
+                    <img src="./assets/images/gallery_3.jpg" alt="SAMA Awards">
+                    <div class="gallery-overlay">
+                        <h3>SAMA AWARDS</h3>
+                        <p>Official DJ for 5+ years</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="festivals">
+                    <img src="./assets/images/gallery_4.jpg" alt="SUMMERFEST">
+                    <div class="gallery-overlay">
+                        <h3>SUMMERFEST</h3>
+                        <p>Summer festival vibes</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="clubs">
+                    <img src="./assets/images/banner.png" alt="Club Performance">
+                    <div class="gallery-overlay">
+                        <h3>CLUB NIGHT</h3>
+                        <p>Intimate club performance</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="festivals">
+                    <img src="./assets/images/school.jpg" alt="RAGE Festival">
+                    <div class="gallery-overlay">
+                        <h3>RAGE FESTIVAL</h3>
+                        <p>Youth festival energy</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item" data-category="corporate">
+                    <img src="./assets/images/dino-bravo-reference.jpg" alt="Brand Activation">
+                    <div class="gallery-overlay">
+                        <h3>BRAND ACTIVATION</h3>
+                        <p>Corporate brand event</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Highlights Section -->
+    <section class="event-highlights-section">
+        <div class="container">
+            <h2 class="section-title">EVENT HIGHLIGHTS</h2>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <h3>UTOPIA</h3>
+                    <p>South Africa's premier electronic music festival</p>
+                    <div class="highlight-stats">
+                        <span>50,000+ Attendees</span>
+                        <span>Main Stage</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>JO'BURG DAY</h3>
+                    <p>City-wide celebration of Johannesburg</p>
+                    <div class="highlight-stats">
+                        <span>100,000+ People</span>
+                        <span>City Festival</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>DURBAN DAY</h3>
+                    <p>Coastal city's biggest annual celebration</p>
+                    <div class="highlight-stats">
+                        <span>75,000+ Attendees</span>
+                        <span>Beachfront Stage</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>CAPE TOWN DAY</h3>
+                    <p>Mother City's premier music event</p>
+                    <div class="highlight-stats">
+                        <span>80,000+ People</span>
+                        <span>Waterfront Venue</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>CAMEL EXPERIENCE</h3>
+                    <p>Exclusive brand activation event</p>
+                    <div class="highlight-stats">
+                        <span>VIP Experience</span>
+                        <span>Brand Partnership</span>
+                    </div>
+                </div>
+                
+                <div class="highlight-card">
+                    <h3>OPIKOPPI</h3>
+                    <p>Legendary South African music festival</p>
+                    <div class="highlight-stats">
+                        <span>40,000+ Fans</span>
+                        <span>Multiple Years</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Behind the Scenes Section -->
+    <section class="behind-scenes-section">
+        <div class="container">
+            <h2 class="section-title">BEHIND THE SCENES</h2>
+            <div class="bts-content">
+                <div class="bts-text">
+                    <h3>The BRAVOMANIA Experience</h3>
+                    <p>Get an exclusive look behind the scenes of DINO BRAVO's performances. From sound checks to crowd interactions, see what goes into creating the perfect BRAVOMANIA experience.</p>
+                    
+                    <div class="bts-features">
+                        <div class="bts-feature">
+                            <h4>Equipment Setup</h4>
+                            <p>Professional Pioneer, Denon DJ & Reloop equipment setup</p>
+                        </div>
+                        <div class="bts-feature">
+                            <h4>Sound Testing</h4>
+                            <p>Meticulous sound checks for perfect audio quality</p>
+                        </div>
+                        <div class="bts-feature">
+                            <h4>Crowd Reading</h4>
+                            <p>Analyzing the audience to curate the perfect playlist</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bts-stats">
+                    <div class="stat-item">
+                        <h4>500+</h4>
+                        <p>Events Performed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>1M+</h4>
+                        <p>People Entertained</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>15+</h4>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100%</h4>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.svg" alt="DINO BRAVO" class="logo">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="about.html">About</a>
+                    <a href="academy.html">Academy</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="./assets/images/hero_fb.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="./assets/images/hero_insta.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="SoundCloud">
+                        <img src="./assets/images/hero_sc.svg" alt="SoundCloud">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Spotify">
+                        <img src="./assets/images/hero_spot.svg" alt="Spotify">
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <img src="./assets/images/hero_tube.svg" alt="YouTube">
+                    </a>
+                    <a href="#" class="social-link" aria-label="WhatsApp">
+                        <img src="./assets/images/hero_whats.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DINO BRAVO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script>
+        // Gallery filtering functionality
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const category = btn.getAttribute('data-category');
+                
+                galleryItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

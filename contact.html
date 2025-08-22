@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DINO BRAVO | Yo Mama's Favourite DJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Left side navigation - closer to center -->
+            <div class="nav-left">
+                <a href="academy.html" class="nav-link">ACADEMY</a>
+                <a href="contact.html" class="nav-link active">CONTACT</a>
+            </div>
+            
+            <!-- Center logo - stays centered -->
+            <div class="nav-logo">
+                <a href="index.html">
+                    <img src="./assets/images/logo.svg" alt="DINO BRAVO" class="logo">
+                </a>
+            </div>
+            
+            <!-- Right side social links -->
+            <div class="nav-right">
+                <div class="nav-social">
+                    <a href="#" class="social-nav-link" aria-label="Spotify">
+                        <img src="./assets/images/social-spotify-svgrepo-com.svg" alt="Spotify">
+                        <span>Spotify</span>
+                    </a>
+                    <a href="#" class="social-nav-link" aria-label="WhatsApp">
+                        <img src="./assets/images/social-whats-app-svgrepo-com.svg" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="#" class="social-nav-link" aria-label="Facebook">
+                        <img src="./assets/images/social-facebook-svgrepo-com.svg" alt="Facebook">
+                        <span>Facebook</span>
+                    </a>
+                </div>
+                
+                <!-- Hamburger menu for remaining items -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            
+            <!-- Hidden menu for hamburger -->
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="music.html" class="nav-link">MUSIC</a></li>
+                <li><a href="gallery.html" class="nav-link">GALLERY</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title">CONTACT DINO BRAVO</h1>
+            <p class="page-subtitle">Ready to Book Yo Mama's Favourite DJ?</p>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2 class="section-title">GET IN TOUCH</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p><a href="tel:+27678566019">+27 67 856 6019</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p><a href="mailto:bookings@djdinobravo.com">bookings@djdinobravo.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h3>Location</h3>
+                                <p>South Africa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">📱</div>
+                            <div class="contact-text">
+                                <h3>Social Media</h3>
+                                <p><a href="#">@DJDINOBRAVO</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <h3>BOOKING INQUIRY</h3>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="event-type">Event Type *</label>
+                            <select id="event-type" name="event-type" required>
+                                <option value="">Select Event Type</option>
+                                <option value="corporate">Corporate Event</option>
+                                <option value="wedding">Wedding</option>
+                                <option value="festival">Festival</option>
+                                <option value="club">Club Night</option>
+                                <option value="private">Private Party</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-date">Event Date *</label>
+                                <input type="date" id="event-date" name="event-date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests">Expected Guests</label>
+                                <input type="number" id="guests" name="guests" placeholder="e.g. 200">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="venue">Venue/Location *</label>
+                            <input type="text" id="venue" name="venue" placeholder="Event venue or city" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us more about your event, music preferences, special requirements, etc."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">SEND BOOKING REQUEST</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">SERVICES</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎵</div>
+                    <h3>Club Performances</h3>
+                    <p>High-energy club sets with the latest tracks and crowd favorites</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Corporate Events</h3>
+                    <p>Professional DJ services for corporate functions and brand activations</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💒</div>
+                    <h3>Weddings</h3>
+                    <p>Creating magical moments with perfect music for your special day</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎪</div>
+                    <h3>Festivals</h3>
+                    <p>Main stage performances at major music festivals across Africa</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">🎉</div>
+                    <h3>Private Parties</h3>
+                    <p>Exclusive DJ services for intimate gatherings and celebrations</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">📻</div>
+                    <h3>Radio Shows</h3>
+                    <p>Guest appearances and mega-mix sessions for radio stations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">WHAT CLIENTS SAY</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <blockquote>
+                        "No good deed goes unnoticed: Dino's musical talents has secured him bragging rights as the Official SAMA (South African Music Awards) DJ. Popular with SA's top corporates for private events, his ability to multimix and cater for all audiences and ages keeps his clients coming back!"
+                    </blockquote>
+                    <cite>- Industry Recognition</cite>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        "DINO BRAVO's performance at our corporate event was absolutely phenomenal. His ability to read the crowd and adapt his music selection throughout the night kept everyone on the dance floor. Truly yo mama's favourite DJ!"
+                    </blockquote>
+                    <cite>- Corporate Client</cite>
+                </div>
+                
+                <div class="testimonial">
+                    <blockquote>
+                        "The energy DINO BRAVO brought to our festival was incredible. His mega-mix style and diverse music selection had the entire crowd going wild. A true professional and master of his craft."
+                    </blockquote>
+                    <cite>- Festival Organizer</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="./assets/images/logo.svg" alt="DINO BRAVO" class="logo">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="music.html">Music</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="about.html">About</a>
+                    <a href="academy.html">Academy</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" class="social-link" aria-label="Facebook">
+                        <img src="./assets/images/hero_fb.svg" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Instagram">
+                        <img src="./assets/images/hero_insta.svg" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-link" aria-label="SoundCloud">
+                        <img src="./assets/images/hero_sc.svg" alt="SoundCloud">
+                    </a>
+                    <a href="#" class="social-link" aria-label="Spotify">
+                        <img src="./assets/images/hero_spot.svg" alt="Spotify">
+                    </a>
+                    <a href="#" class="social-link" aria-label="YouTube">
+                        <img src="./assets/images/hero_tube.svg" alt="YouTube">
+                    </a>
+                    <a href="#" class="social-link" aria-label="WhatsApp">
+                        <img src="./assets/images/hero_whats.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DINO BRAVO. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
