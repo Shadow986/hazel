@@ -1,11 +1,11 @@
-# Electronic Music Artist Website
+# DJ DINO BRAVO - Electronic Music Artist Website
 
-A modern, responsive website for electronic music artists, inspired by professional DJ/producer websites like Afrojack.com.
+A modern, responsive website for electronic music artist DJ DINO BRAVO, inspired by professional DJ/producer websites like Afrojack.com.
 
 ## Project Structure
 
 ```
-electronic-artist-website/
+dj-dino-bravo-website/
 ├── index.html                 # Main HTML file
 ├── README.md                 # Project documentation
 ├── html-theme-font-reference.md  # Theme reference file
@@ -120,7 +120,7 @@ The website uses Google Fonts (Inter and Poppins). To change fonts:
 
 ## License
 
-© 2024 Electronic Artist. All rights reserved.
+© 2024 DJ DINO BRAVO. All rights reserved.
 
 ## Credits
 

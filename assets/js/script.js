@@ -327,7 +327,7 @@ if ('IntersectionObserver' in window) {
 
 // Console message for developers
 console.log(`
-🎵 Electronic Music Artist Website
+🎵 DJ DINO BRAVO - Electronic Music Artist Website
 Built with HTML, CSS, and JavaScript
 Inspired by modern electronic music aesthetics
 
@@ -338,7 +338,7 @@ Features:
 - Modern UI/UX
 - Performance optimized
 
-© 2024 Electronic Artist. All rights reserved.
+© 2024 DJ DINO BRAVO. All rights reserved.
 `);
 
 // Add some easter eggs for music lovers
@@ -366,7 +366,7 @@ if (logo) {
     logo.addEventListener('click', () => {
         logoClicks++;
         if (logoClicks === 10) {
-            showNotification('🎧 You really love this artist! Here\'s a special message: Keep the music alive!', 'success');
+            showNotification('🎧 You really love DJ DINO BRAVO! Here\'s a special message: Keep the music alive!', 'success');
             logoClicks = 0;
         }
     });
