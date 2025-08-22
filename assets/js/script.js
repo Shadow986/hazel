@@ -379,3 +379,226 @@ if (logo) {
         }
     });
 }
+
+// YouTube Music Carousel Functionality
+class YouTubeCarousel {
+    constructor() {
+        this.currentSlide = 0;
+        this.totalSlides = 0;
+        this.autoPlayInterval = null;
+        this.autoPlayDelay = 8000; // 8 seconds
+        this.isPlaying = false;
+        
+        this.init();
+    }
+    
+    init() {
+        // Wait for DOM to be ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => this.setupCarousel());
+        } else {
+            this.setupCarousel();
+        }
+    }
+    
+    setupCarousel() {
+        this.carousel = document.getElementById('youtubeCarousel');
+        this.videos = document.querySelectorAll('.youtube-video');
+        this.indicators = document.querySelectorAll('.indicator');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        
+        if (!this.carousel || this.videos.length === 0) {
+            console.log('YouTube carousel elements not found');
+            return;
+        }
+        
+        this.totalSlides = this.videos.length;
+        
+        // Set up event listeners
+        this.setupEventListeners();
+        
+        // Start autoplay
+        this.startAutoPlay();
+        
+        // Pause autoplay when user interacts
+        this.setupInteractionHandlers();
+        
+        console.log('🎵 YouTube Music Carousel initialized with', this.totalSlides, 'videos');
+    }
+    
+    setupEventListeners() {
+        // Navigation buttons
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prevSlide());
+        }
+        
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.nextSlide());
+        }
+        
+        // Indicator dots
+        this.indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => this.goToSlide(index));
+        });
+        
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (this.isInViewport()) {
+                if (e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    this.prevSlide();
+                } else if (e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    this.nextSlide();
+                }
+            }
+        });
+        
+        // Touch/swipe support
+        this.setupTouchHandlers();
+    }
+    
+    setupTouchHandlers() {
+        let startX = 0;
+        let startY = 0;
+        let endX = 0;
+        let endY = 0;
+        
+        this.carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        });
+        
+        this.carousel.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            endY = e.changedTouches[0].clientY;
+            
+            const deltaX = startX - endX;
+            const deltaY = startY - endY;
+            
+            // Only trigger if horizontal swipe is more significant than vertical
+            if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
+                if (deltaX > 0) {
+                    this.nextSlide();
+                } else {
+                    this.prevSlide();
+                }
+            }
+        });
+    }
+    
+    setupInteractionHandlers() {
+        // Pause autoplay on hover
+        this.carousel.addEventListener('mouseenter', () => this.pauseAutoPlay());
+        this.carousel.addEventListener('mouseleave', () => this.startAutoPlay());
+        
+        // Pause autoplay when video is playing
+        const iframes = this.carousel.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+            iframe.addEventListener('load', () => {
+                // Listen for YouTube player events (requires YouTube API)
+                // For now, we'll pause on any iframe interaction
+                iframe.addEventListener('click', () => {
+                    this.pauseAutoPlay();
+                    setTimeout(() => this.startAutoPlay(), 30000); // Resume after 30 seconds
+                });
+            });
+        });
+    }
+    
+    goToSlide(index) {
+        if (index === this.currentSlide) return;
+        
+        // Remove active class from current slide and indicator
+        this.videos[this.currentSlide].classList.remove('active');
+        this.indicators[this.currentSlide].classList.remove('active');
+        
+        // Add prev class to current slide for animation
+        if (index > this.currentSlide) {
+            this.videos[this.currentSlide].classList.add('prev');
+        }
+        
+        // Update current slide
+        this.currentSlide = index;
+        
+        // Add active class to new slide and indicator
+        this.videos[this.currentSlide].classList.add('active');
+        this.indicators[this.currentSlide].classList.add('active');
+        
+        // Clean up animation classes after transition
+        setTimeout(() => {
+            this.videos.forEach(video => {
+                video.classList.remove('prev');
+            });
+        }, 500);
+        
+        // Reset autoplay
+        this.resetAutoPlay();
+    }
+    
+    nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+    }
+    
+    prevSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevIndex);
+    }
+    
+    startAutoPlay() {
+        this.pauseAutoPlay(); // Clear any existing interval
+        this.autoPlayInterval = setInterval(() => {
+            this.nextSlide();
+        }, this.autoPlayDelay);
+        this.isPlaying = true;
+    }
+    
+    pauseAutoPlay() {
+        if (this.autoPlayInterval) {
+            clearInterval(this.autoPlayInterval);
+            this.autoPlayInterval = null;
+        }
+        this.isPlaying = false;
+    }
+    
+    resetAutoPlay() {
+        if (this.isPlaying) {
+            this.startAutoPlay();
+        }
+    }
+    
+    isInViewport() {
+        if (!this.carousel) return false;
+        
+        const rect = this.carousel.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+}
+
+// Initialize YouTube carousel when page loads
+const youtubeCarousel = new YouTubeCarousel();
+
+// Add smooth scroll to latest music section
+document.addEventListener('DOMContentLoaded', () => {
+    // Update navigation if there's a link to latest music
+    const musicLinks = document.querySelectorAll('a[href="#music"]');
+    musicLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const latestMusicSection = document.getElementById('latest-music');
+            if (latestMusicSection) {
+                latestMusicSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
